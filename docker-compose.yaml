@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  api:
+    build: .
+    container_name: blockchain_challenge_1
+    environment:
+      - ETH_RPC_URL=https://eth.llamarpc.com
+      - HTTP_PORT=10088
+      - PORT=10089
+      - PUBLIC_IP=
+      - FLAG=CyKor{}
+      - SHARED_SECRET=
+    ports:
+      - 10089:10089
+      - 10088:10088
+    restart: "no"
+
+networks:
+  default:
